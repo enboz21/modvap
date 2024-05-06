@@ -7,6 +7,6 @@
 <AnchorPane prefHeight="362.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
    <children>
       <Label fx:id="welcomeText" layoutX="95.0" layoutY="119.0" prefHeight="18.0" prefWidth="187.0" />
-      <Button layoutX="253.0" layoutY="226.0" onAction="#onHelloButtonClick" text="Hello!" />
+      <Button layoutX="253.0" layoutY="226.0" onAction="#onHelloButtonClick" text="dosya yükle" />
    </children>
 </AnchorPane>
