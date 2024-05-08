@@ -8,12 +8,13 @@ public class Main {
         String time;
         double realtimes;
         String isim;
-        String fiyat;
-
-        public yapı(String isim, String time, String fiyat, double realtimes) {
+        String tutar;
+        String maliyet;
+        public yapı(String isim, String time, String tutar,String maliyet, double realtimes) {
             this.time = time;
             this.isim = isim;
-            this.fiyat = fiyat;
+            this.tutar = tutar;
+            this.maliyet=maliyet;
             this.realtimes = realtimes;
         }
     }
@@ -25,14 +26,15 @@ public class Main {
     public Main(int kaç) throws Menü.hata {
         vakit = 8.00;
         String dizi1[] = {"mercimek çorbası", "ezogelin çorbası", "yayla çorbası", "bulgur pilavı", "pirinç pilavı", "kuru fasülye", "kavurma", "lahmacun", "adana kebap", "tavuk şiş"};
-        double fiyat[] = {30, 30.5, 30, 35, 35, 60, 85.35, 15, 54, 85};
+        double tutar[] = {30, 30.5, 30, 35, 40, 60, 85.35, 15, 54, 85};
+        double maliyet[] = {20, 25.5, 15, 30, 35, 45.4, 73, 6, 37, 66,};
         m = new Menü(dizi1.length);
 
         for (int i = 0; i < dizi1.length; i++) {
-            m.ekle(dizi1[i], fiyat[i]);
+            m.ekle(dizi1[i], tutar[i],maliyet[i]);
         }
         System.out.println(System.getProperty("user.home"));
-        File f = new File(System.getProperty("user.home") + "/Masaüstü/yeniDosya"+kaç+".csv");
+        File f = new File(System.getProperty("user.home") + "/Masaüstü/yeniDosya" + kaç + ".csv");
         if (!f.exists()) {
             try {
                 f.createNewFile();
@@ -47,11 +49,11 @@ public class Main {
 
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(f));
-            bw.write("zaman;yemek ismi;fiyat\n");
+            bw.write("zaman;yemek ismi;maliyet;tutar\n");
             yapı[] a = kütle();
             int i = 0;
             while (a[i].realtimes < 21.30) {
-                bw.write(a[i].time + ";" + a[i].isim + ";" + a[i].fiyat + "\n");
+                bw.write(a[i].time + ";" + a[i].isim + ";" +a[i].maliyet+";"+ a[i].tutar + "\n");
                 i++;
             }
             bw.close();
@@ -95,7 +97,12 @@ public class Main {
             int sayy = (int) (b * 100);
             int saypp = sayy - (sill * 100);
             String ss = String.valueOf(sill) + "," + String.valueOf(saypp);
-            dizi[i] = new yapı(m.çeks(ren), s, ss, vakit);
+             b = (m.çekm(ren));
+             sill = (int) b;
+             sayy = (int) (b * 100);
+             saypp = sayy - (sill * 100);
+            String sss = String.valueOf(sill) + "," + String.valueOf(saypp);
+            dizi[i] = new yapı(m.çeks(ren), s, ss,sss, vakit);
         }
         return dizi;
     }
@@ -104,11 +111,12 @@ public class Main {
         Random r = new Random();
         int ren = 0;
         if (vakit < 12.00) {
-            int[] ağır = {1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10};
+            int[] ağır = {0,0,0,1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9, 10};
             ren = r.nextInt(10);
+
             ren = ağır[ren];
         } else {
-            int[] ağır = {1, 2, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10};
+            int[] ağır = {0,1, 2, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10};
             ren = r.nextInt(10);
             ren = ağır[ren];
         }

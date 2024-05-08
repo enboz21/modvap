@@ -8,11 +8,13 @@ public class Menü {
     class node {
         int num;
         String isim;
-        double fiyat;
-        public node(String isim,double fiyat) {
+        double tutar;
+        double maliyet;
+        public node(String isim,double tutar,double maliyet) {
             this.isim = isim;
             num = sonayı();
-            this.fiyat=fiyat;
+            this.tutar=tutar;
+            this.maliyet=maliyet;
         }
     }
 
@@ -53,8 +55,8 @@ public class Menü {
      * @param isim
      * @throws hata
      */
-    public void ekle(String isim,double fiyat) throws hata {
-        node n = new node(isim,fiyat);
+    public void ekle(String isim,double tutar,double maliyet) throws hata {
+        node n = new node(isim,tutar,maliyet);
         if (!dolumu()) {
             dizi[indis] = n;
             indis += 1;
@@ -75,6 +77,9 @@ public class Menü {
         return dizi[indis].isim;
     }
     public double çekf(int indis){
-        return dizi[indis].fiyat;
+        return dizi[indis].tutar;
+    }
+    public double çekm(int indis){
+        return dizi[indis].maliyet;
     }
 }
