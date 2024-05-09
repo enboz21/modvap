@@ -1,6 +1,8 @@
 import jdk.dynalink.beans.StaticClass;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Random;
 
 public class Main {
@@ -18,7 +20,7 @@ public class Main {
             this.realtimes = realtimes;
         }
     }
-
+    LocalDate l= LocalDate.of(2009, 3, 1);
     static double vakit = 8.00;
     static Menü m;
     static yapı[] dizi;
@@ -34,7 +36,7 @@ public class Main {
             m.ekle(dizi1[i], tutar[i],maliyet[i]);
         }
         System.out.println(System.getProperty("user.home"));
-        File f = new File(System.getProperty("user.home") + "/Masaüstü/yeniDosya" + kaç + ".csv");
+        File f = new File(System.getProperty("user.home") + "/Masaüstü/" + l.plusDays(kaç) + ".csv");
         if (!f.exists()) {
             try {
                 f.createNewFile();
