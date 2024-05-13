@@ -36,7 +36,7 @@ public class Main {
             m.ekle(dizi1[i], tutar[i],maliyet[i]);
         }
         System.out.println(System.getProperty("user.home"));
-        File f = new File(System.getProperty("user.home") + "/Masaüstü/" + l.plusDays(kaç) + ".csv");
+        File f = new File(System.getProperty("user.home") + "/Desktop/" + l.plusDays(kaç) + ".csv");
         if (!f.exists()) {
             try {
                 f.createNewFile();
