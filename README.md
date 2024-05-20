@@ -8,5 +8,5 @@
 
 Technologies used in the project:
 
-*   javafxml and css
+*   java,fxml and css
 
