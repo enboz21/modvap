@@ -33,13 +33,14 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "MODVAP-85-veriler-i-in-algoritma-tasarlanmas",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef9e00eb-08cd-4c30-a785-0d3e1082768b" name="Changes" comment="" />
+      <changelist id="d018ea4b-ff93-470c-9343-d57e93dbea82" name="Changes" comment="" />
       <created>1714998557385</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
