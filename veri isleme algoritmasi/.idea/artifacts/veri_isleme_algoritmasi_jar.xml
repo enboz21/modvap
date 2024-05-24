@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="veri isleme algoritmasi:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/veri_isleme_algoritmasi_jar</output-path>
+    <root id="archive" name="veri isleme algoritmasi.jar">
+      <element id="module-output" name="veri isleme algoritmasi" />
+    </root>
+  </artifact>
+</component>
