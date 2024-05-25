@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.tasarim.Ekran2"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasarim.dy">
+   <children>
+      <Label layoutX="111.0" layoutY="81.0" prefHeight="30.0" prefWidth="94.0" text="sermaye" />
+      <Label layoutX="111.0" layoutY="111.0" prefHeight="30.0" prefWidth="94.0" text="toplam kazanç" />
+      <Label layoutX="111.0" layoutY="141.0" prefHeight="30.0" prefWidth="94.0" text="toplam maliyet" />
+      <Label layoutX="111.0" layoutY="171.0" prefHeight="30.0" prefWidth="94.0" text="net kar" />
+      <Label layoutX="111.0" layoutY="201.0" prefHeight="30.0" prefWidth="94.0" text="faliyet verimliliği" />
+      <Button layoutX="480.0" layoutY="322.0" mnemonicParsing="false" onAction="#tak" prefHeight="26.0" prefWidth="68.0" text="Button" />
+      <TextField fx:id="sermaye" layoutX="205.0" layoutY="84.0" prefHeight="26.0" prefWidth="293.0" />
+      <TextField fx:id="top_kazanç" layoutX="205.0" layoutY="113.0" prefHeight="26.0" prefWidth="293.0" />
+      <TextField fx:id="top_maliyet" layoutX="205.0" layoutY="143.0" prefHeight="26.0" prefWidth="293.0" />
+      <TextField fx:id="net_kar" layoutX="205.0" layoutY="173.0" prefHeight="26.0" prefWidth="293.0" />
+      <TextField fx:id="faliyet_var" layoutX="205.0" layoutY="203.0" prefHeight="26.0" prefWidth="293.0" />
+   </children>
 </AnchorPane>

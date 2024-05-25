@@ -12,9 +12,10 @@
       <Button layoutX="449.0" layoutY="82.0" mnemonicParsing="false" onAction="#dosya_seçme" text="Button" />
       <TextField fx:id="dosya_yolu" layoutX="90.0" layoutY="82.0" prefHeight="26.0" prefWidth="351.0" />
       <Button layoutX="475.0" layoutY="295.0" mnemonicParsing="false" onAction="#ana_tıklama" text="Button" />
-      <TextField fx:id="Özkaynaklar" layoutX="90.0" layoutY="117.0" prefHeight="26.0" prefWidth="351.0" />
-      <Slider fx:id="hisse" disable="true" layoutX="90.0" layoutY="183.0" onDragDetected="#setHisse" prefHeight="14.0" prefWidth="292.0" snapToPixel="false" />
-      <CheckBox fx:id="tik" layoutX="90.0" layoutY="155.0" mnemonicParsing="false" onAction="#aktif" prefHeight="18.0" prefWidth="91.0" text="hisse oranı" />
-      <Label fx:id="hiise_deyeri" disable="true" layoutX="384.0" layoutY="181.0" prefHeight="18.0" prefWidth="196.0" text="Label" />
+      <TextField fx:id="Özkaynaklar" layoutX="90.0" layoutY="117.0" prefHeight="26.0" prefWidth="351.0" promptText="öz kaynalşar" />
+      <Slider fx:id="hisse" disable="true" layoutX="90.0" layoutY="228.0" onDragDetected="#setHisse" prefHeight="14.0" prefWidth="292.0" snapToPixel="false" />
+      <CheckBox fx:id="tik" layoutX="90.0" layoutY="200.0" mnemonicParsing="false" onAction="#aktif" prefHeight="18.0" prefWidth="91.0" text="hisse oranı" />
+      <Label fx:id="hiise_deyeri" disable="true" layoutX="384.0" layoutY="226.0" prefHeight="18.0" prefWidth="196.0" text="Label" />
+      <TextField fx:id="faliyet" layoutX="90.0" layoutY="155.0" prefHeight="26.0" prefWidth="351.0" promptText="faliyet giderleri" />
    </children>
 </AnchorPane>
